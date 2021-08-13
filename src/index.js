@@ -14,8 +14,8 @@ function initThree() {
   // var geometry = new THREE.SphereGeometry(60, 20, 40); //创建一个球体几何对象
   var geometry = new THREE.BoxGeometry(100, 100, 100); //创建一个立方体几何对象Geometry
   var material = new THREE.MeshLambertMaterial({
-    color: "#F5F5DC", specular: 0x4488ee,
-    shininess: 80
+    color: 0x0000ff, specular:0x4488ee,
+    shininess:12
   }); //材质对象Material
   var mesh = new THREE.Mesh(geometry, material); //网格模型对象Mesh
   scene.add(mesh); //网格模型添加到场景中
@@ -45,9 +45,7 @@ function initThree() {
    */
   var renderer = new THREE.WebGLRenderer();
   renderer.setSize(width, height);//设置渲染区域尺寸
-
-  let caves_color = new THREE.Color('black');
-  renderer.setClearColor(caves_color, 1); //设置背景颜色
+  renderer.setClearColor(0xb9d3ff, 1); //设置背景颜色
   renderer.render(scene, camera);
 
   // document.body.appendChild(renderer.domElement); //body元素中插入canvas对象
